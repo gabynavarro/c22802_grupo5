@@ -1,0 +1,98 @@
+.carousel-container {
+	width: 90%;
+	margin: auto;
+}
+
+.popular-movies {
+	margin-bottom: 70px;
+}
+
+.popular-movies .container-principal {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.popular-movies .container-principal .left-arrow,
+.popular-movies .container-principal .right-arrow {
+	position: absolute;
+	border: none;
+	background: rgba(0,0,0,0.3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.popular-movies .container-principal .left-arrow:hover,
+.popular-movies .container-principal .right-arrow:hover {
+	background: rgba(0,0,0, .9);
+}
+
+.popular-movies .container-principal .left-arrow {
+	left: 0;
+}
+
+.popular-movies .container-principal .right-arrow {
+	right: 0;
+}
+
+/* ---- ----- ----- Carousel ----- ----- ----- */
+.popular-movies .container-carousel {
+	width: 100%;
+	padding: 20px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+.popular-movies .container-carousel .carousel {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.popular-movies .container-carousel .carousel .movie-carousel {
+	min-width: 20%;
+	transition: .3s ease all;
+	box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+}
+
+.popular-movies .container-carousel .carousel .movie-carousel.hover {
+	transform: scale(1.2);
+	transform-origin: center;
+}
+
+.popular-movies .container-carousel .carousel .movie-carousel img {
+	width: 100%;
+	vertical-align: top;
+}
+
+/* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
+.container-title-controls {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+.container-title-controls h3 {
+	color: #fff;
+	font-size: 30px;
+}
+
+.container-title-controls .controls-index button {
+	background: #fff;
+	height: 3px;
+	width: 10px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+}
+
+.container-title-controls .controls-index button:hover,
+.container-title-controls .controls-index button.activo {
+	background: red;
+}
