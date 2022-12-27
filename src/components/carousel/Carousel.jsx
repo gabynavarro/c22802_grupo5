@@ -1,8 +1,6 @@
-import React, { useRef, useState, useEffect } from "react";
-import {
-  BBrowserRouter as Router, Routes, Route, 
-  Link, 
-  useNavigate, useParams, useLocation,
+import React, {useState, useEffect } from "react";
+import {   
+  useNavigate, 
   }from 'react-router-dom'
 import CardMovie from "../card-movie/CardMovie";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -22,7 +20,7 @@ const Carousel = ({categoria, subcategoria}) => {
   console.log(categoria)
 
   console.log(subcategoria)
-  const history = useNavigate();
+  //const history = useNavigate();
  
   const BASE_URL = `https://api.themoviedb.org/3`
   const APIKEY = `c30046e601e1f588297bc67b7f52c812`;
@@ -34,7 +32,7 @@ const Carousel = ({categoria, subcategoria}) => {
   const concatenarRuta = (pathASumar) => {
     ruta = ruta + pathASumar
   }
-   
+  
 
   {categoria === `movie` && concatenarRuta("/movie")}
   {categoria === `tv` &&  concatenarRuta("/tv")}
