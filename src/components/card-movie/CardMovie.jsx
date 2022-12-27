@@ -10,8 +10,6 @@ import {
 import imageNotFound from '../../assets/img/nofound.jpg';
 
 
-
-
 const CardMovie = ({ resultado, categoria }) => {
 
  const history =  useNavigate();

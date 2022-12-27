@@ -1,6 +1,9 @@
 .main-container {
-	width: 90%;
+	width: 100%;
 	margin: auto;
+}
+.main-container-movie{
+		margin-left: 10%;
 }
 .main-movie {
 	font-size: 16px;
@@ -14,9 +17,10 @@
 	align-items: end;
 }
 
-.main-movie .main-container  {
+.main-movie .main-container-movie  {
 	margin: 0 auto;
 	margin-bottom: 6.25em;
+	margin-left: 3.5em;
 }
 
 .main-movie .main-title {
