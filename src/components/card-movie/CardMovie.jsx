@@ -1,10 +1,6 @@
 import React from 'react';
-
 import {Link,useNavigate}  from 'react-router-dom';
-
-  import Card from '@material-ui/core/Card';
-
-
+import Card from '@material-ui/core/Card';
 import imageNotFound from '../../assets/img/nofound.jpg';
 import '../card-movie/cardStyle.css'
 

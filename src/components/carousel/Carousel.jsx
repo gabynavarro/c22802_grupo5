@@ -1,7 +1,4 @@
 import React, {useState, useEffect } from "react";
-import {   
-  useNavigate, 
-  }from 'react-router-dom'
 import CardMovie from "../card-movie/CardMovie";
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
@@ -34,22 +31,20 @@ const Carousel = ({categoria, subcategoria}) => {
   }
   
 
-  {categoria === `movie` && concatenarRuta("/movie")}
-  {categoria === `tv` &&  concatenarRuta("/tv")}
-  {categoria === `trendingMovie` && concatenarRuta(`/trending/movie/week`)}
-  {categoria === `trendingSerie` && concatenarRuta(`/trending/tv/week`)}
-  {subcategoria === `topRated` && concatenarRuta(`/top_rated`)}
-  {subcategoria === `popular` && concatenarRuta(`/popular`)}
-  {subcategoria === `nowPlaying` && concatenarRuta(`/now_playing`)}
-  {subcategoria === `upcoming` && concatenarRuta(`/upcoming`)}
-  {subcategoria === `onTheAir` && concatenarRuta(`/on_the_air`)}
+  categoria === `movie` && concatenarRuta("/movie")
+  categoria === `tv` &&  concatenarRuta("/tv")
+  categoria === `trendingMovie` && concatenarRuta(`/trending/movie/week`)
+  categoria === `trendingSerie` && concatenarRuta(`/trending/tv/week`)
+  subcategoria === `topRated` && concatenarRuta(`/top_rated`)
+  subcategoria === `popular` && concatenarRuta(`/popular`)
+  subcategoria === `nowPlaying` && concatenarRuta(`/now_playing`)
+  subcategoria === `upcoming` && concatenarRuta(`/upcoming`)
+  subcategoria === `onTheAir` && concatenarRuta(`/on_the_air`)
 
-  console.log(ruta)
 
   const [resultados, setResultados] = useState([]);
 
-  useEffect(() => {
-      
+  useEffect(() => {      
       const searchString = `${BASE_URL}${ruta}${queryParams}`
       console.log(searchString)
 
@@ -59,7 +54,7 @@ const Carousel = ({categoria, subcategoria}) => {
               console.log(data.results)
               setResultados(data.results)
           })
-  }, []);
+  }, [BASE_URL, queryParams, ruta]);
 
   return (
     <>
