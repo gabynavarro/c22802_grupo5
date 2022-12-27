@@ -1,35 +1,36 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 import logo from '../../../assets/img/vidio_logo.png'
 import '../nav/nav.css'
 export const Nav=()=>{
   return (
     <div>
-       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-        <img src={logo} alt="" width="70" height="34" className='app-logo'/>           
+       <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <div className="container-fluid">
+        <img src={logo} alt="" className='app-logo my-nav'/>         
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" >Home</a> 
+            <div className="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul className="navbar-nav">
+                <li className="nav-item">
+                <Link to="/" className='nav-link active'>Home</Link>
                 </li>
-                <li class="nav-item">
-                 <a class="nav-link" href="#">Nosotros</a> 
+                <li className="nav-item">
+                <Link to="/nosotros" className='nav-link'>Nosotros</Link>
                 </li>
-                <li class="nav-item">
-                 <a class="nav-link" href="#">Contacto</a> 
+                <li className="nav-item">
+                <Link to="/contacto" className='nav-link'>Contacto</Link>
                 </li>
-                <li class="nav-item dropdown">
-                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <li className="nav-item dropdown">
+                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Video Opciones
                 </a> 
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="#">Mas buscadas</a></li>
-                    <li><a class="dropdown-item" href="#">Mas vistas</a></li>
-                    <li><a class="dropdown-item" href="#">Recomendadas</a></li>
+                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <li><a className="dropdown-item" href="#">Mas buscadas</a></li>
+                    <li><a className="dropdown-item" href="#">Mas vistas</a></li>
+                    <li><a className="dropdown-item" href="#">Recomendadas</a></li>
                 </ul>
                 </li>
             </ul>
