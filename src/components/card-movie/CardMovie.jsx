@@ -1,7 +1,6 @@
 import React from 'react';
-import { 
-  useNavigate
-  }  from 'react-router-dom';
+
+import {Link,useNavigate}  from 'react-router-dom';
 
   import Card from '@material-ui/core/Card';
 
@@ -25,8 +24,8 @@ const CardMovie = ({ resultado, categoria }) => {
     categoria = path
   }
 
-  {categoria === `trendingMovie` && cambiarRuta(`movie`)}
-  {categoria === `trendingSerie` && cambiarRuta(`tv`)}
+  categoria === `trendingMovie` && cambiarRuta(`movie`)
+  categoria === `trendingSerie` && cambiarRuta(`tv`)
 
   resultado.poster_path
   ? imagen=`https://image.tmdb.org/t/p/w370_and_h556_bestv2/${resultado.poster_path}`
@@ -48,8 +47,8 @@ const CardMovie = ({ resultado, categoria }) => {
                       : recortarTitulo(resultado.name)   
                     : resultado.name
                 }</h5>
-         {/* <p class="card-text">{} </p> */}
-         <a href="#" className="main-button">Mas info</a>
+          {/* <p class="card-text">{} </p>  */}
+         <Link to="/" className='main-button'>Mas info</Link>         
       </div>
 
     

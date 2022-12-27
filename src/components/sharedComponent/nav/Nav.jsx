@@ -24,13 +24,11 @@ export const Nav=()=>{
                 <Link to="/contacto" className='nav-link'>Contacto</Link>
                 </li>
                 <li className="nav-item dropdown">
-                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Video Opciones
-                </a> 
+                <Link to="" className='nav-link dropdown-toggle' id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Video Opciones</Link> 
                 <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a className="dropdown-item" href="#">Mas buscadas</a></li>
-                    <li><a className="dropdown-item" href="#">Mas vistas</a></li>
-                    <li><a className="dropdown-item" href="#">Recomendadas</a></li>
+                    <li><Link to="/" className='dropdown-item'>Mas buscadas</Link></li>                    
+                    <li><Link to="/" className='dropdown-item'>Mas vistas</Link></li>
+                    <li><Link to="/" className='dropdown-item'>Recomendadas</Link></li>
                 </ul>
                 </li>
             </ul>
