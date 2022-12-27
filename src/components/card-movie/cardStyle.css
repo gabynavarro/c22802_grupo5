@@ -1,4 +1,26 @@
 .movie-cart{
     width: 17rem;
-    height: 10rem;
+    height: 20rem;
+}
+
+.main-button {
+	background: rgba(0,0,0, 0.5);
+	border: none;
+	border-radius: 0.31em;
+	padding: 0.62em 1.87em;
+	color: #fff;   
+	margin-right: 1.25em;
+	cursor: pointer;
+	transition: .3s ease all;
+	font-size: 1.12em;
+    text-decoration:none;    
+    
+}
+
+.main-button:hover {
+	background: rgb(5, 5, 5);
+	color: rgb(250, 248, 248);
+}
+.card-title{
+    margin-bottom: 1.25em;
 }
