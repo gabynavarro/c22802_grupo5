@@ -8,7 +8,7 @@ import {
 
 
 import imageNotFound from '../../assets/img/nofound.jpg';
-
+import '../card-movie/cardStyle.css'
 
 const CardMovie = ({ resultado, categoria }) => {
 
@@ -38,8 +38,8 @@ const CardMovie = ({ resultado, categoria }) => {
           onClick = {()=> { console.log("hiciste click en la card ") 
           history.push(`/${categoria}/${resultado.id}`)}}>    
       <img className="card-img-top" src={imagen} alt="Card image cap"/>
-      <div class="card-body">
-         <h5 class="card-title">{ resultado.title
+      <div className="card-body">
+         <h5 className="card-title">{ resultado.title
                   ? resultado.title.length < 28 
                         ? resultado.title 
                         : recortarTitulo(resultado.title)
@@ -50,7 +50,7 @@ const CardMovie = ({ resultado, categoria }) => {
                     : resultado.name
                 }</h5>
          {/* <p class="card-text">{} </p> */}
-         <a href="#" class="btn btn-primary">VER</a>
+         <a href="#" className="main-button">Mas info</a>
       </div>
 
     

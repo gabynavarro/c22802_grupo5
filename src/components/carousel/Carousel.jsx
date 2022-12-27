@@ -65,7 +65,7 @@ const Carousel = ({categoria, subcategoria}) => {
 
   return (
     <>
-    <Swiper slidesPerView={4} 
+    <Swiper slidesPerView={3} 
               spaceBetween={4} 
               slidesPerGroup={3} 
               loop={true} 
