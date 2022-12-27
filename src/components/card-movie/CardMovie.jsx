@@ -15,6 +15,10 @@ const CardMovie = ({ resultado, categoria }) => {
     let strCorto = `${str.slice(0, 28)}...`
     return strCorto;
   }; 
+  const recortarDescripcion = (str) => {
+    let strCorto = `${str.slice(0, 50)}...`
+    return strCorto;
+  }; 
 
   const cambiarRuta = (path) => {
     categoria = path
@@ -28,12 +32,12 @@ const CardMovie = ({ resultado, categoria }) => {
   : imagen= imageNotFound;
 
   return (
-   <Card className="card .movie-cart"
+   <Card className="card movie-cart"
           onClick = {()=> { console.log("hiciste click en la card ") 
           history.push(`/${categoria}/${resultado.id}`)}}>    
       <img className="card-img-top" src={imagen} alt="Card image cap"/>
-      <div className="card-body">
-         <h5 className="card-title">{ resultado.title
+      <div className="card-body my-cardbody">
+        <h5 className="card-title">{ resultado.title
                   ? resultado.title.length < 28 
                         ? resultado.title 
                         : recortarTitulo(resultado.title)
@@ -43,8 +47,11 @@ const CardMovie = ({ resultado, categoria }) => {
                       : recortarTitulo(resultado.name)   
                     : resultado.name
                 }</h5>
-          {/* <p class="card-text">{} </p>  */}
-         <Link to="/" className='main-button'>Mas info</Link>         
+          {resultado.overview.length==0?
+          <p class="card-text">Sin descripción</p>
+          :      
+          <p class="card-text">{recortarDescripcion(resultado.overview)} </p>  }
+        <Link to="/" className='main-button'>Mas info</Link>         
       </div>
 
     

@@ -62,7 +62,7 @@ const Carousel = ({categoria, subcategoria}) => {
               spaceBetween={4} 
               slidesPerGroup={3} 
               loop={true} 
-              loopFillGroupWithBlank={true} 
+              loopFillGroupWithBlank={false} 
               navigation={true} 
               className="mySwiper">
           {
