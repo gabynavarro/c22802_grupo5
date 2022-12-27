@@ -1,0 +1,27 @@
+.footer-container{
+
+    height: 10rem;
+    background-color: black;
+    color:#ffff;
+    display: flex;
+    justify-content: center;    
+}
+.footer-mynetflix .container{
+    margin: 0%;
+    padding: 0%;
+}
+.footer-mynetflix{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+font-size: 1rem;
+}
+.social-group-icon{
+    display: flex;
+    justify-content: space-between;
+}
+.social-icon{
+    scale: 1.2;
+    margin-bottom: 1rem;
+}
