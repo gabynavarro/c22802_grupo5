@@ -10,9 +10,9 @@ function MainMovie() {
 				<p className="main-description">
 					Narra las aventuras de un grupo de exploradores que hacen uso de un agujero de gusano recientemente descubierto para superar las limitaciones de los viajes espaciales tripulados y vencer las inmensas distancias que tiene un viaje interestelar.
 				</p>
-				<Link to="/" className='main-button'> Reproducir</Link>
+				<Link to="/" className='main-button-1'> Reproducir</Link>
 				{/* <a role="button" className=""><i className="fas fa-play icon-play"></i>Reproducir</a> */}
-				<Link to="/" className='main-button'> Más información</Link>
+				<Link to="/" className='main-button-2'> Más información</Link>
 				{/* <a role="button" className="main-button"><i className="fas fa-info-circle"></i></a> */}
 			</div>
 		</div>

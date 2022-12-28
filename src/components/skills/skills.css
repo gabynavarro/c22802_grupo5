@@ -7,10 +7,7 @@
     flex-direction: row;
     margin: 0rem 2rem;   
 }
-.img-skills{
-    width: auto;
-    height: auto;    
-}
+
 
 .group-skills{   
     margin: 1rem 1rem;
@@ -29,9 +26,18 @@
     display: flex;
     justify-content: center;
 }
+.group-skills{
+    width: 90%;
+}
 .title-skill .hr-skill{   
     margin: auto;
     height: 3px;
     width: 50%;
     background-color: black;
+}
+@media only screen and (max-width: 500px) and (min-width: 341px) {
+    .container-skills{
+        width: 100%;      
+       margin: 0;
+    }
 }

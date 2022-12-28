@@ -60,7 +60,22 @@ const Carousel = ({categoria, subcategoria}) => {
     <div className="container-swiper">
     <h2 className="title-Swiper">Recomendados</h2>
       <hr className='hr-swiper'/>
-    <Swiper slidesPerView={3} 
+    <Swiper 
+          breakpoints={{
+          375:{
+            width: 375,
+              slidesPerView: 1,
+          },
+           576: {
+              width: 576,
+              slidesPerView: 2,
+           },
+            768: {
+               width: 768,
+               slidesPerView: 3,
+             },
+           }}
+              slidesPerView={3} 
               spaceBetween={4} 
               slidesPerGroup={3} 
               loop={true} 

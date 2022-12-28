@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardGroup, Row, Col } from 'react-bootstrap';
+import { Card, Row, Col } from 'react-bootstrap';
 import '../skills/skills.css'
 import reactImg from '../../assets/img/react.png';
 import bootstrap from '../../assets/img/boostrap.png'
@@ -15,11 +15,12 @@ const tecnology=["React", "Boostrap", "Font Awesome", "Java Script", "CSS3", "HT
 
 const Skills = () => {
     return (
+        <>
         <div className='container-skills'>
             <div className='title-skill'>
                 <h2 className='title-tegnology'>Tenologías usadas</h2>
                  <hr className='hr-skill'/>
-            <Row xs={2} md={4} className="g-4 group-skills">
+            <Row xs={1} sm={3} ld={3}md={4} className="g-3 group-skills">
                 {Array.from({ length: 8 }).map((_, idx) => (
                 <Col>
                     <Card>
@@ -38,61 +39,7 @@ const Skills = () => {
             </Row>
         </div>
         </div>
-    
-        // <div className='container-skills'>
-        //     <div className='title-skill'>
-        //         <h2>Tenologias usadas</h2>
-        //         <hr className='hr-skill'/>
-        //         <CardGroup className='group-skills'>
-        //             <Card>
-        //                 <Card.Img variant="top" src={reactImg} className="img-skills" />
-        //                 <Card.Body>
-        //                 <Card.Title>React</Card.Title>
-        //                 <Card.Text>
-        //                    React está basado en un paradigma llamado programación orientada a componentes en el que cada componente es una pieza con la que el usuario puede interactuar. Estas piezas se crean usando una sintaxis llamada JSX permitiendo escribir HTML (y opcionalmente CSS) dentro de objetos JavaScript.
-        //                 </Card.Text>
-        //                 </Card.Body>           
-        //             </Card>
-        //             <Card>
-        //                 <Card.Img variant="top" src={bootstrap} className="img-skills"/>
-        //                 <Card.Body>
-        //                 <Card.Title>Bootstrap</Card.Title>
-        //                 <Card.Text>
-        //                 Bootstrap es un framework front-end que fornece estructuras de CSS para la creación de sitios web y aplicaciones responsivas de forma rápida y simple. Además, puede lidiar con sitios web de desktop y páginas de dispositibos mobiles de la misma forma.
-        //                 </Card.Text>
-        //                 </Card.Body>                     
-        //             </Card>
-        //             <Card>
-        //                 <Card.Img variant="top" src={fontAwesome} className="img-skills"/>
-        //                 <Card.Body>
-        //                 <Card.Title>Font Awesome</Card.Title>
-        //                 <Card.Text>
-        //                 Font Awesom es un framework de iconos vectoriales y estilos css. Pero… ¿para qué sirve? Este framework es utilizado para sustituir imágenes de iconos comunes por gráficos vectoriales convertidos en fuentes. Para ello utiliza una librería de mas de 400 iconos transformadas en fuentes.
-        //                 </Card.Text>
-        //                 </Card.Body>                       
-        //             </Card>
-        //             <Card>
-        //                 <Card.Img variant="top" src={bootstrap} className="img-skills"/>
-        //                 <Card.Body>
-        //                 <Card.Title>Bootstrap</Card.Title>
-        //                 <Card.Text>
-        //                 Bootstrap es un framework front-end que fornece estructuras de CSS para la creación de sitios web y aplicaciones responsivas de forma rápida y simple. Además, puede lidiar con sitios web de desktop y páginas de dispositibos mobiles de la misma forma.
-        //                 </Card.Text>
-        //                 </Card.Body>                     
-        //             </Card>
-        //             <Card>
-        //                 <Card.Img variant="top" src={bootstrap} className="img-skills"/>
-        //                 <Card.Body>
-        //                 <Card.Title>Bootstrap</Card.Title>
-        //                 <Card.Text>
-        //                 Bootstrap es un framework front-end que fornece estructuras de CSS para la creación de sitios web y aplicaciones responsivas de forma rápida y simple. Además, puede lidiar con sitios web de desktop y páginas de dispositibos mobiles de la misma forma.
-        //                 </Card.Text>
-        //                 </Card.Body>                     
-        //             </Card>
-        //         </CardGroup>
-        //     </div>
-            
-        // </div>
+        </>       
     );
 }
 

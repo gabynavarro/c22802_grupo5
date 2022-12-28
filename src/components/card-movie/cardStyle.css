@@ -24,3 +24,11 @@
 .card-title{
     margin-bottom: 1.25em;
 }
+@media only screen and (max-width: 500px) and (min-width: 341px) {
+	.movie-cart{
+		width: 100%;		
+	}
+	.movie-cart .card-img-top{
+		width: 100% ;
+	}
+}

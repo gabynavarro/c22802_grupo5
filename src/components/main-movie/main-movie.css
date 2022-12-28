@@ -37,7 +37,7 @@
 	margin-bottom: 1.25em;
 }
 
-.main-movie .main-button {
+.main-movie .main-button-2, .main-movie .main-button-1 {
 	background: rgba(0,0,0, 0.5);
 	border: none;
 	border-radius: 0.31em;
@@ -47,17 +47,26 @@
 	cursor: pointer;
 	transition: .3s ease all;
 	font-size: 1.12em;
+	text-decoration: none;
 	
 }
 
-.main-movie .main-button:hover {
+.main-movie .main-button-1:hover,.main-movie .main-button-2:hover {
 	background: #fff;
 	color: #000;
 }
 
-.main-movie .main-button i {
-	margin-right: 1.25em;
-}
+
 .icon-play{
 	color: #fff;
+}
+
+@media only screen and (max-width: 500px) and (min-width: 341px) {
+	.main-movie .main-description{
+		max-width: 90%;
+	}
+	.main-movie .main-button-1{
+		display: none;		
+	}
+    
 }
