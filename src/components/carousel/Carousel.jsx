@@ -74,10 +74,18 @@ const Carousel = ({categoria, subcategoria}) => {
                width: 768,
                slidesPerView: 3,
              },
+             970: {
+               width: 970,
+               slidesPerView: 3,
+             },
+              1010: {
+               width: 1010,
+               slidesPerView: 3,
+             },
            }}
               slidesPerView={3} 
               spaceBetween={4} 
-              slidesPerGroup={3} 
+              slidesPerGroup={4} 
               loop={true} 
               loopFillGroupWithBlank={false} 
               navigation={true}              
