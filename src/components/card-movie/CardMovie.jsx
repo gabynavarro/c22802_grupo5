@@ -1,10 +1,14 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link,useNavigate}  from 'react-router-dom';
 import Card from '@material-ui/core/Card';
+import ModalHome from '../modal/Modal-home';
 import imageNotFound from '../../assets/img/nofound.jpg';
 import '../card-movie/cardStyle.css'
 
 const CardMovie = ({ resultado, categoria }) => {
+
+  const [show, setShow] = useState(false);	 
+  const handleShow = () => setShow(true);
 
  const history =  useNavigate();
   let imagen;
@@ -16,7 +20,7 @@ const CardMovie = ({ resultado, categoria }) => {
     return strCorto;
   }; 
   const recortarDescripcion = (str) => {
-    let strCorto = `${str.slice(0, 50)}...`
+    let strCorto = `${str.slice(0, 45)}...`
     return strCorto;
   }; 
 
@@ -32,6 +36,7 @@ const CardMovie = ({ resultado, categoria }) => {
   : imagen= imageNotFound;
 
   return (
+    <>
    <Card className="card movie-cart"
           onClick = {()=> { console.log("hiciste click en la card ") 
           history.push(`/${categoria}/${resultado.id}`)}}>    
@@ -51,12 +56,16 @@ const CardMovie = ({ resultado, categoria }) => {
           <p class="card-text">Sin descripción</p>
           :      
           <p class="card-text">{recortarDescripcion(resultado.overview)} </p>  }
-        <Link to="/" className='main-button'>Mas info</Link>         
-      </div>
-
-    
+        <Link to="/" className='main-button'  onClick={handleShow}>Mas info </Link>         
+      </div>    
     </Card>
-
+    <ModalHome estado={show}
+				cambiarEstado={setShow}
+				mostrarModal={true}
+        data={resultado}				
+				/>
+		
+    </>
 
   );
 }
