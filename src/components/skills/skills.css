@@ -1,0 +1,37 @@
+.container-skills{    
+    background-color: rgb(245, 242, 242);    
+    margin-top: 3rem;
+    width: 95%;
+    display: flex;    
+    justify-content: center; 
+    flex-direction: row;
+    margin: 0rem 2rem;   
+}
+.img-skills{
+    width: auto;
+    height: auto;    
+}
+
+.group-skills{   
+    margin: 1rem 1rem;
+    display: flex;
+    justify-content: center;
+}
+.title-skill{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family:'Courier New', Courier, monospace;
+}
+.title-tegnology{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+.title-skill .hr-skill{   
+    margin: auto;
+    height: 3px;
+    width: 50%;
+    background-color: black;
+}

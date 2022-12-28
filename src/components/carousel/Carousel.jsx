@@ -7,7 +7,7 @@ import "swiper/css/navigation"
 import SwiperCore, {
   Pagination,Navigation
 } from 'swiper/core';
-
+import "../carousel/carousel.css"
 SwiperCore.use([Pagination,Navigation]);
 
 
@@ -57,15 +57,17 @@ const Carousel = ({categoria, subcategoria}) => {
   }, [BASE_URL, queryParams, ruta]);
 
   return (
-    <>
+    <div className="container-swiper">
+    <h2 className="title-Swiper">Recomendados</h2>
+      <hr className='hr-swiper'/>
     <Swiper slidesPerView={3} 
               spaceBetween={4} 
               slidesPerGroup={3} 
               loop={true} 
               loopFillGroupWithBlank={false} 
-              navigation={true} 
+              navigation={true}              
               className="mySwiper">
-          {
+          {          
             resultados.map((resultado) => {
                 return (
                   <div key={resultado.id}>      
@@ -80,7 +82,7 @@ const Carousel = ({categoria, subcategoria}) => {
             })
         }       
       </Swiper>
-    </>
+    </div>
   )
 }
 
