@@ -32,6 +32,7 @@ export const Nav=()=>{
                 </ul>
                 </li>
             </ul>
+            <Link to="/auth" className='nav-link nav-log'>Login</Link>
             </div>
         </div>
        </nav>

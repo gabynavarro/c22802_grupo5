@@ -4,4 +4,14 @@
 .my-nav{
     width:70px;
     height:34px;
+    display: flex;
+    flex-direction: row;
+    
+}
+.navbar .nav-log{
+    padding: 0; 
+    display: flex !important;
+    justify-content:space-between !important;
+    
+
 }
