@@ -1,17 +1,34 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import Nav from '../../components/sharedComponent/nav/Nav';
 import Footer from '../../components/sharedComponent/footer/footer';
+import {collection,addDoc,doc } from 'firebase/firestore'
+import {db} from '../../components/utils/Fire'
 import '../auth/auth.css'
+import { useNavigate } from 'react-router-dom';
+
+
 const Auth = () => {
 
     const [isLogin, setIsLogin] = useState(true);
+    const [addUser, setAddUser]=useState("");
+    const [addEmail,setEmail]=useState("")
+    const [addPws,setPws]=useState("")
+    const navigate=useNavigate();
+    
+    const usersCollection=collection(db, "usuario")
+    const objetUser=async (e)=>{
+        e.preventDefault()
+        await addDoc(usersCollection,{nombre: addUser,email:addEmail,pws:addPws })
+        console.log(addUser)
+        navigate("/")
+    }
 
     return (
 
         <div className="container-principal">
             <Nav />
             <div className="contaienr-form">
-                <form className="LoginScreen" onSubmit>
+                <form className="LoginScreen" onSubmit={objetUser}>
                     <div className="wrapper-auth">
                         <h2 className="wrapper-auth__title">
                             <div>{isLogin ? "Crear Cuenta" : "Iniciar Sesion"}</div>
@@ -29,6 +46,8 @@ const Auth = () => {
                                     type="text"
                                     placeholder="Ingresa tu nombre completo"
                                     required
+                                    value={addUser}
+                                    onChange={(e)=>setAddUser(e.target.value)}
                                 // ref={nameInputRef}
                                 />
                             ) : (
@@ -41,6 +60,8 @@ const Auth = () => {
                                 type="text"
                                 placeholder="Ingresa tu correo"
                                 required
+                                value={addEmail}
+                                onChange={(e)=>setEmail(e.target.value)}
                             //   ref={emailInputRef}
                             />
                         </div>
@@ -51,6 +72,8 @@ const Auth = () => {
                                 type="password"
                                 placeholder="Ingresa la contraseña"
                                 required
+                                value={addPws}
+                                    onChange={(e)=>setPws(e.target.value)}
                             //   ref={passwordInputRef}
                             />
                             <span className="wrapper-auth__info">
